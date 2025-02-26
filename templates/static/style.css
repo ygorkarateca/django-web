@@ -28,11 +28,20 @@ nav {
     height: 8vh;
 }
 
-main {
-    background: url("bg1.jpg") no-repeat
-    center center;
+.background-container {
+
     background-size: cover;
     height: 92vh;
+    animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+
+    0% { background-image: url('bg1.jpg'); }
+    50% { background-image: url('bg2.jpg'); }
+    75% { background-image: url('bg3.jpg'); }
+    100% { background-image: url('bg4.jpg'); }
+    
 }
 
 .nav-list {

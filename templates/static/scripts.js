@@ -44,3 +44,15 @@ const mobileNavbar = new MobileNavbar(
 )
 
 mobileNavbar.init();
+
+
+const images = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg'];
+let index = 0;
+
+function changeBackground() {
+    const container = document.getElementById('backgroundContainer');
+    container.style.backgroundImage = `url(${images[index]})`;
+    index = (index + 1) % images.length;
+}
+
+setInterval(changeBackground, 5000);
